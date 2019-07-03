@@ -1,4 +1,16 @@
-# BookapiFront
+# BookApi-SpringBoot-Angular
+
+Simple BookAPI CRUD using Spring Boot and Angular.
+
+Project to train Spring Boot programming with Angular doing the Front-end part.
+
+It's a REST API that you can insert a book by Title and Author, and search by Id, show all Books, Update and Delete a Book.
+
+## Back-End
+
+Back-end repository [here](https://github.com/TiagoVeri/BookApi-SpringBoot-Angular-Back-End)
+
+## BookapiFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
 
