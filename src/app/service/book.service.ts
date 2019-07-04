@@ -21,4 +21,8 @@ export class BookService {
     saveBook(book: Book) {
         return this._httpService.post<Book>(this.bookUrl, book);
     }
+
+    deleteBook(book: Book) {
+        return this._httpService.delete<Book>(this.bookUrl + "/" + book.id);
+    }
 }

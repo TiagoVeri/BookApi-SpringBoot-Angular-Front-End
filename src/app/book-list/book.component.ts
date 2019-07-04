@@ -20,4 +20,10 @@ export class BookComponent implements OnInit {
     });
   }
 
+  deleteBook(book: Book): void {
+    this.bookService.deleteBook(book).subscribe(data => {
+      this.books = this.books.filter(u => u !== book)
+    });
+  }
+
 }
