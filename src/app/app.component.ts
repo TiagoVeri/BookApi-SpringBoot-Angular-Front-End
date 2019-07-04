@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bookapi-Front';
+  title: string;
+
+  constructor() {
+    this.title = 'Book Api - Spring Boot + Angular App';
+  }
 }

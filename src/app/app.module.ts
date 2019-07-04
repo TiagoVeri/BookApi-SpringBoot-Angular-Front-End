@@ -1,19 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { BookComponent } from '../app/book/book.component';
-import { BookService } from './book/book.service';
+import { BookComponent } from './book-list/book.component';
+import { BookService } from './service/book.service';
+import { BookFormComponent } from './book-form/book-form.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BookComponent,
+    BookFormComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
