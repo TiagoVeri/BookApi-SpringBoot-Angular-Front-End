@@ -1,3 +1,6 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../book-form/book-form.component.ts" rel="onSubmit(book)">
+
 <div class="card my-5">
     <div class="card-body">
         <table class="table table-bordered table-striped">
@@ -14,7 +17,9 @@
                     <td>{{ book.id }}</td>
                     <td>{{ book.title }}</td>
                     <td>{{ book.author }}</td>
-                    <td>Edit | <button class="btn btn-danger" (click)="deleteBook(book)"> Delete</button></td>
+                    <td><button class="btn btn-primary">Edit</button>
+                        <button (click)="deleteBook(book)"> <i class="material-icons">delete</i> </button>
+                    </td>
                 </tr>
             </tbody>
         </table>

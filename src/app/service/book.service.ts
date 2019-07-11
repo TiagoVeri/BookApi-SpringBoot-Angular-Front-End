@@ -1,10 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
 import { Book } from '../model/book';
 
 
-
+const httpOptions = {
+    headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+    })
+}
 
 @Injectable()
 export class BookService {
@@ -24,5 +28,10 @@ export class BookService {
 
     deleteBook(book: Book) {
         return this._httpService.delete<Book>(this.bookUrl + "/" + book.id);
+    }
+
+    editBook(book: Book): Observable<any> {
+        const url = `${this.bookUrl}/${book.id}`;
+        return this._httpService.put<Book>(url, book, httpOptions);
     }
 }

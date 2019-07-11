@@ -27,5 +27,11 @@ export class BookFormComponent {
     this.router.navigate(['/books']);
   }
 
+  saveEditedBook(): void {
+    this.bookService.editBook(this.book).subscribe(result => this.gotoUserList());
+  }
+
+
+
 
 }
