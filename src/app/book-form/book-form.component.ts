@@ -20,16 +20,21 @@ export class BookFormComponent {
   }
 
   onSubmit() {
-    this.bookService.saveBook(this.book).subscribe(result => this.gotoUserList());
+    if (this.book.id == undefined) {
+      this.bookService.saveBook(this.book).subscribe(result => this.gotoUserList());
+    } else {
+      this.bookService.editBook(this.book).subscribe(result => this.gotoUserList());
+    }
+
   }
 
   gotoUserList() {
     this.router.navigate(['/books']);
   }
 
-  saveEditedBook(): void {
-    this.bookService.editBook(this.book).subscribe(result => this.gotoUserList());
-  }
+  // saveEditedBook(): void {
+  //   this.bookService.editBook(this.book).subscribe(result => this.gotoUserList());
+  // }
 
 
 

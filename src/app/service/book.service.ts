@@ -13,10 +13,12 @@ const httpOptions = {
 @Injectable()
 export class BookService {
 
+
     private bookUrl: string;
     constructor(private _httpService: HttpClient) {
         this.bookUrl = 'http://localhost:8080/books';
     }
+
 
     getAllBooks(): Observable<Book[]> {
         return this._httpService.get<Book[]>(this.bookUrl);
@@ -30,7 +32,7 @@ export class BookService {
         return this._httpService.delete<Book>(this.bookUrl + "/" + book.id);
     }
 
-    editBook(book: Book): Observable<any> {
+    editBook(book: Book) {
         const url = `${this.bookUrl}/${book.id}`;
         return this._httpService.put<Book>(url, book, httpOptions);
     }
