@@ -10,6 +10,9 @@ It's a REST API that you can insert a book by Title and Author, and search by Id
 
 Back-end repository [here](https://github.com/TiagoVeri/BookApi-SpringBoot-Angular-Back-End)
 
+## A Implementar:
+Faltando função de Update
+
 ## BookapiFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
